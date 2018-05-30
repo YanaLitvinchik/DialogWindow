@@ -13,17 +13,24 @@ namespace WF1
     public partial class Form1 : Form
     {
         List<Student> student;
+        List<Teacher> teacher;
         BindingSource bs = new BindingSource();
         public Form1()
         {
             student = new List<Student>();
+            teacher = new List<Teacher>();
             student.Add(new Student("Vladimir", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18)));
-            student.Add(new Student("Yana", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18)));
+            student.Add(new Student("Yana", "Dmitrievich", "Klepach", new DateTime(1998, 4, 18)));
             student.Add(new Student("Dima", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18)));
+            teacher.Add(new Teacher("Li Y.V."));
+            teacher.Add(new Teacher("Zulu B.E."));
+            teacher.Add(new Teacher("Alpha D.T."));
             InitializeComponent();
-            bs.DataSource = student;
-            listBoxStudents.DataSource = bs;
-            
+            //bs.DataSource = student;
+        //    listBoxStudents.DataSource = bs;
+
+            TeacherscomboBox1.Items.AddRange(teacher.ToArray());
+            TeacherscomboBox1.DisplayMember = "TeachersName";
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -37,8 +44,11 @@ namespace WF1
         }
         private void listBoxStudents_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var wnd = new Dialog();
-            Add(wnd);
+            var wnd1 = new InfoForm();
+            wnd1.NameT = (TeacherscomboBox1.Text);
+            wnd1.NameStudent = listBoxStudents.Text;
+            wnd1.Marks = new List<int> { 1,2,3,4,5,6,7,8,9};
+            var result = wnd1.ShowDialog();
         }
         private void Add(Dialog wnd)
         {
@@ -57,6 +67,26 @@ namespace WF1
                 bs.ResetBindings(false);
 
             }
+        }
+
+        private void TeacherscomboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            //student.Clear();
+            //student.Add(new Student() { Name = "asdsd" });
+
+            //bs.ResetBindings(false);
+            listBoxStudents.Items.Clear();
+            foreach (var item in student)
+            {
+                listBoxStudents.Items.Add(item);
+            }
+        }
+
+        private void listBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

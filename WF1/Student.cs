@@ -12,7 +12,7 @@ namespace WF1
         public string SecondName { get; set; }
         public string Surname { get; set; }
         public DateTime DateOfBirth { get; set; }
-
+        public List<int> Marks { get; set; }
         public Student()
         {
 
