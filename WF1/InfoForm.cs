@@ -38,15 +38,20 @@ namespace WF1
                 StudenttextBox2.Text = value;
             }
         }
+        List<int> _marks;
         public List<int> Marks
         {
             get
             {
-                return MarktextBox3.Text.ToArray().ToList();
+                return _marks;
+                // MarktextBox3.Text.ToArray().ToList();
             }
             set
             {
-                MarktextBox3.Text = value;
+                _marks = value;
+
+                var lstString = value.Select(x => x.ToString()).ToList();
+                MarktextBox3.Text = String.Join(", ", lstString);
             }
         }
 
