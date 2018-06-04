@@ -34,7 +34,8 @@ namespace WF1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            var wnd = new Dialog();
+            var wnd = new Dialog(teacher);
+            wnd.SelectedTeacher = TeacherscomboBox1.SelectedItem as Teacher;
             Add(wnd);
         }
         private void button2_Click(object sender, EventArgs e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WF1
 {
-    class Teacher
+    public class Teacher
     {
         public string TeachersName { get; set; }
         public Teacher()
@@ -23,5 +23,5 @@ namespace WF1
         }
     }
 
-    }
+}
 

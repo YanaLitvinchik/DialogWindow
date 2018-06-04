@@ -134,6 +134,8 @@
             this.TeachercomboBox1.Name = "TeachercomboBox1";
             this.TeachercomboBox1.Size = new System.Drawing.Size(121, 21);
             this.TeachercomboBox1.TabIndex = 10;
+            this.TeachercomboBox1.SelectedIndexChanged += new System.EventHandler(this.TeachercomboBox1_SelectedIndexChanged);
+            this.TeachercomboBox1.TextChanged += new System.EventHandler(this.TeachercomboBox1_TextChanged);
             // 
             // label5
             // 

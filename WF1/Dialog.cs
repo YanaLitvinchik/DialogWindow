@@ -12,9 +12,11 @@ namespace WF1
 {
     public partial class Dialog : Form
     {
-        public Dialog()
+        public Dialog(List<Teacher> teachers)
         {
             InitializeComponent();
+            TeachercomboBox1.DataSource = teachers;
+            TeachercomboBox1.DisplayMember = "TeachersName";
         }
 
         public String Names
@@ -28,6 +30,13 @@ namespace WF1
                 NametextBox1.Text = value;
             }
         }
+
+        public Teacher SelectedTeacher
+        {
+            get { return TeachercomboBox1.SelectedItem as Teacher; }
+            set { TeachercomboBox1.SelectedItem = value; }
+        }
+
         public String SName
         {
             get
@@ -67,6 +76,16 @@ namespace WF1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TeachercomboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          //  TeachercomboBox1.Items.Clear();
+        }
+
+        private void TeachercomboBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
