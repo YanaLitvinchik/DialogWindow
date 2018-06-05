@@ -19,16 +19,13 @@ namespace WF1
         {
             student = new List<Student>();
             teacher = new List<Teacher>();
-            student.Add(new Student("Vladimir", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18)));
-            student.Add(new Student("Yana", "Dmitrievich", "Klepach", new DateTime(1998, 4, 18)));
-            student.Add(new Student("Dima", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18)));
+            student.Add(new Student("Vladimir", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18), new List<int> { 1, 2, 3, 4}));
+            student.Add(new Student("Yana", "Dmitrievich", "Klepach", new DateTime(1998, 4, 18), new List<int> { 4,3,2,1}));
+            student.Add(new Student("Dima", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18), new List<int> {1,2,3,4 }));
             teacher.Add(new Teacher("Li Y.V."));
             teacher.Add(new Teacher("Zulu B.E."));
             teacher.Add(new Teacher("Alpha D.T."));
             InitializeComponent();
-            //bs.DataSource = student;
-        //    listBoxStudents.DataSource = bs;
-
             TeacherscomboBox1.Items.AddRange(teacher.ToArray());
             TeacherscomboBox1.DisplayMember = "TeachersName";
         }
@@ -48,7 +45,7 @@ namespace WF1
             var wnd1 = new InfoForm();
             wnd1.NameT = (TeacherscomboBox1.Text);
             wnd1.NameStudent = listBoxStudents.Text;
-            wnd1.Marks = new List<int> { 1,2,3,4,5,6,7,8,9};
+            wnd1.Marks = (listBoxStudents.SelectedItem as Student).Marks;
             var result = wnd1.ShowDialog();
         }
         private void Add(Dialog wnd)

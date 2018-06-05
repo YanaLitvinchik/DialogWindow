@@ -52,20 +52,24 @@ namespace WF1
                 MarktextBox3.Text = String.Join(", ", lstString);
             }
         }
-
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-
         private void AddNewMarkbutton_Click(object sender, EventArgs e)
         {
-            _marks = AddMarktextBox4.Text.ToArray().ToList().ToString();                //fix
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
+            try
+            {
+                _marks.Add(int.Parse(AddMarktextBox4.Text));
+            }
+            catch (Exception)
+            {
+                AddMarktextBox4.Text = String.Empty;
+            }
+            AddMarktextBox4.Clear();
 
+        }
         private void TEachertextBox1_TextChanged(object sender, EventArgs e)
         {
 

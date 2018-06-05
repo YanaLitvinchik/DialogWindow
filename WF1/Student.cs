@@ -17,12 +17,13 @@ namespace WF1
         {
 
         }
-        public Student(string _name,string _secondname, string _surname, DateTime data )
+        public Student(string _name,string _secondname, string _surname, DateTime data, List<int> _marks )
         {
             this.Name = _name;
             this.SecondName = _secondname;
             this.Surname = _surname;
             this.DateOfBirth = data;
+            this.Marks = new List<int>(){}; 
         }
         public override string ToString()
         {
