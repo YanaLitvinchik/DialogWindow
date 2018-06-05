@@ -44,12 +44,10 @@ namespace WF1
             get
             {
                 return _marks;
-                // MarktextBox3.Text.ToArray().ToList();
             }
             set
             {
                 _marks = value;
-
                 var lstString = value.Select(x => x.ToString()).ToList();
                 MarktextBox3.Text = String.Join(", ", lstString);
             }
@@ -63,6 +61,7 @@ namespace WF1
 
         private void AddNewMarkbutton_Click(object sender, EventArgs e)
         {
+            _marks = AddMarktextBox4.Text.ToArray().ToList().ToString();                //fix
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

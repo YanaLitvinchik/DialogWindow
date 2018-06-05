@@ -101,7 +101,7 @@
             this.AddNewMarkbutton.Name = "AddNewMarkbutton";
             this.AddNewMarkbutton.Size = new System.Drawing.Size(75, 23);
             this.AddNewMarkbutton.TabIndex = 7;
-            this.AddNewMarkbutton.Text = "Add";
+            this.AddNewMarkbutton.Text = "Add Mark";
             this.AddNewMarkbutton.UseVisualStyleBackColor = true;
             this.AddNewMarkbutton.Click += new System.EventHandler(this.AddNewMarkbutton_Click);
             // 
