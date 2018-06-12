@@ -91,12 +91,10 @@ namespace WF1
 
         private void TeachercomboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-          //  TeachercomboBox1.Items.Clear();
         }
 
         private void TeachercomboBox1_TextChanged(object sender, EventArgs e)
         {
-            
         }
     }
 }

@@ -46,6 +46,7 @@ namespace WF1
             wnd1.NameT = (TeacherscomboBox1.Text);
             wnd1.NameStudent = listBoxStudents.Text;
             wnd1.Marks = (listBoxStudents.SelectedItem as Student).Marks;
+            wnd1.PhoneNumber = (listBoxStudents.SelectedItem as Student).PhoneNumberStudent;
             var result = wnd1.ShowDialog();
         }
         private void Add(Dialog wnd)
@@ -61,7 +62,8 @@ namespace WF1
                 {
                     SecondName = wnd.SName,
                     Surname = wnd.SurnameName,
-                    Name = wnd.Names
+                    Name = wnd.Names, 
+                    PhoneNumberStudent = wnd.PhoneNumberStudent
                 });
                 bs.ResetBindings(false);
                 }
@@ -108,7 +110,7 @@ namespace WF1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var wnd = new SMS();
+            var wnd = new SMS(teacher);
             wnd.Show();
         }
 

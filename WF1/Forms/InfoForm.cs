@@ -28,7 +28,7 @@ namespace WF1
             }
         }
 
-        public String PhoneNumber
+        public String PhoneNumber//
         {
             get { return textBoxPN.Text; }
             set { textBoxPN.Text = value; }

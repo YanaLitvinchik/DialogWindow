@@ -1,19 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogWindow", "DialogWindow\DialogWindow.csproj", "{579AE8D1-ECAE-4F89-BCC3-AB51A862A069}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Window2", "Window2\Window2.csproj", "{1C47D3CD-4BF5-4508-8B95-A909AA029EA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDialogs", "NetDialogs\NetDialogs.csproj", "{0DE1FB81-59AE-4F84-A34B-6D472627CA51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF1", "WF1\WF1.csproj", "{70333234-94C9-455E-978C-FC40F99C6CE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlProject", "..\..\..\Downloads\_AmazingButton_GDI+\UserControlProject\UserControlProject.csproj", "{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib SMS", "..\..\..\Downloads\StudentProject-master\SMSLib\Lib SMS.csproj", "{A8DF5834-A3AA-488E-8E2D-D689900E461D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib SMS", "..\..\..\Desktop\homework\SMSLib-master\SMSLib-master\Lib SMS.csproj", "{A8DF5834-A3AA-488E-8E2D-D689900E461D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +21,6 @@ Global
 		{579AE8D1-ECAE-4F89-BCC3-AB51A862A069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{579AE8D1-ECAE-4F89-BCC3-AB51A862A069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{579AE8D1-ECAE-4F89-BCC3-AB51A862A069}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C47D3CD-4BF5-4508-8B95-A909AA029EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C47D3CD-4BF5-4508-8B95-A909AA029EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C47D3CD-4BF5-4508-8B95-A909AA029EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C47D3CD-4BF5-4508-8B95-A909AA029EA2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0DE1FB81-59AE-4F84-A34B-6D472627CA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0DE1FB81-59AE-4F84-A34B-6D472627CA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DE1FB81-59AE-4F84-A34B-6D472627CA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,10 +29,6 @@ Global
 		{70333234-94C9-455E-978C-FC40F99C6CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70333234-94C9-455E-978C-FC40F99C6CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70333234-94C9-455E-978C-FC40F99C6CE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8DF5834-A3AA-488E-8E2D-D689900E461D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8DF5834-A3AA-488E-8E2D-D689900E461D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8DF5834-A3AA-488E-8E2D-D689900E461D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2138E24-20DB-41E6-ACE2-BFAA72EE14D9}
 	EndGlobalSection
 EndGlobal
