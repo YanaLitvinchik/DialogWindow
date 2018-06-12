@@ -65,15 +65,7 @@ namespace WF1
                 bs.ResetBindings(false);
                 }
         }
-        private void AddTeacher(AddTeacherForm wnd)
-        {
-            var result = wnd.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                teacher.Add(new Teacher());
-                bs.ResetBindings(false);
-            }
-        }
+       
         private void TeacherscomboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //student.Clear();
@@ -90,11 +82,27 @@ namespace WF1
         {
 
         }
+        TextBox addteacher;
 
         private void AddTeacherButton_Click(object sender, EventArgs e)
         {
-            var wnd = new AddTeacherForm();
-            AddTeacher(wnd);
+            addteacher = new TextBox();
+            addteacher.Location = new Point(AddTeacherButton.Location.X, AddTeacherButton.Location.Y+AddTeacherButton.Size.Height+1);
+            addteacher.Size = AddTeacherButton.Size;
+            addteacher.Parent = this;
+            //teacher.Add(new Teacher(addteacher.Text));
+            //addteacher.Clear();
+            addteacher.KeyDown += Addteacher_KeyDown;
+        }
+
+        private void Addteacher_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                teacher.Add(new Teacher(addteacher.Text));
+                TeacherscomboBox1.Items.Add(addteacher.Text);
+                addteacher.Dispose();
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -102,5 +110,7 @@ namespace WF1
             var wnd = new SMS();
             wnd.Show();
         }
+
+       
     }
 }

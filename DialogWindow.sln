@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDialogs", "NetDialogs\Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF1", "WF1\WF1.csproj", "{70333234-94C9-455E-978C-FC40F99C6CE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlProject", "..\..\..\Downloads\_AmazingButton_GDI+\UserControlProject\UserControlProject.csproj", "{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{70333234-94C9-455E-978C-FC40F99C6CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70333234-94C9-455E-978C-FC40F99C6CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70333234-94C9-455E-978C-FC40F99C6CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
