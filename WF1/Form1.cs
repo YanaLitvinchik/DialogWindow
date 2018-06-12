@@ -19,12 +19,12 @@ namespace WF1
         {
             student = new List<Student>();
             teacher = new List<Teacher>();
-            student.Add(new Student("Vladimir", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18), new List<int> { 1, 2, 3, 4}));
-            student.Add(new Student("Yana", "Dmitrievich", "Klepach", new DateTime(1998, 4, 18), new List<int> { 4,3,2,1}));
-            student.Add(new Student("Dima", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18), new List<int> {1,2,3,4 }));
-            teacher.Add(new Teacher("Li Y.V."));
-            teacher.Add(new Teacher("Zulu B.E."));
-            teacher.Add(new Teacher("Alpha D.T."));
+            student.Add(new Student("Vladimir", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18), new List<int> { 1, 2, 3, 4}, "0631894543"));
+            student.Add(new Student("Yana", "Dmitrievich", "Klepach", new DateTime(1998, 4, 18), new List<int> { 4,3,2,1}, "0631894543"));
+            student.Add(new Student("Dima", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18), new List<int> {1,2,3,4 }, "0631894543"));
+            teacher.Add(new Teacher("Li Y.V.", "0631894543"));
+            teacher.Add(new Teacher("Zulu B.E.", "0631894543"));
+            teacher.Add(new Teacher("Alpha D.T.", "0631894543"));
             InitializeComponent();
             TeacherscomboBox1.Items.AddRange(teacher.ToArray());
             TeacherscomboBox1.DisplayMember = "TeachersName";
@@ -53,6 +53,7 @@ namespace WF1
             wnd.Names = (listBoxStudents.SelectedItem as Student).Name;
             wnd.SName = (listBoxStudents.SelectedItem as Student).SecondName;
             wnd.SurnameName = (listBoxStudents.SelectedItem as Student).Surname;
+            wnd.PhoneNumberStudent = (listBoxStudents.SelectedItem as Student).PhoneNumberStudent;
             var result = wnd.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -99,7 +100,7 @@ namespace WF1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                teacher.Add(new Teacher(addteacher.Text));
+                teacher.Add(new Teacher(addteacher.Text, "0631894543"));
                 TeacherscomboBox1.Items.Add(addteacher.Text);
                 addteacher.Dispose();
             }

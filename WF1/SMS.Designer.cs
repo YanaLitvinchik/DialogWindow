@@ -44,7 +44,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(77, 99);
+            this.labelName.Location = new System.Drawing.Point(67, 99);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(35, 13);
             this.labelName.TabIndex = 0;
@@ -70,7 +70,7 @@
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(77, 24);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(67, 26);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(78, 13);
             this.labelPhoneNumber.TabIndex = 5;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 375);
+            this.ClientSize = new System.Drawing.Size(370, 382);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelCountSMS);
             this.Controls.Add(this.labelSymbols);

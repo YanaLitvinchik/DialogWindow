@@ -46,12 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddTeacherForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddTeacherForm.Designer.cs">
-      <DependentUpon>AddTeacherForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Classes\d.cs" />
     <Compile Include="Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +75,6 @@
     </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="Teacher.cs" />
-    <EmbeddedResource Include="AddTeacherForm.resx">
-      <DependentUpon>AddTeacherForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dialog.resx">
       <DependentUpon>Dialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,7 +110,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Downloads\StudentProject-master\SMSLib\Lib SMS.csproj">
+      <Project>{a8df5834-a3aa-488e-8e2d-d689900e461d}</Project>
+      <Name>Lib SMS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

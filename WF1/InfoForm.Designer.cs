@@ -37,6 +37,8 @@
             this.AddMarktextBox4 = new System.Windows.Forms.TextBox();
             this.AddNewMarkbutton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.PNLabel = new System.Windows.Forms.Label();
+            this.textBoxPN = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -90,14 +92,14 @@
             // 
             // AddMarktextBox4
             // 
-            this.AddMarktextBox4.Location = new System.Drawing.Point(34, 185);
+            this.AddMarktextBox4.Location = new System.Drawing.Point(34, 211);
             this.AddMarktextBox4.Name = "AddMarktextBox4";
             this.AddMarktextBox4.Size = new System.Drawing.Size(100, 20);
             this.AddMarktextBox4.TabIndex = 6;
             // 
             // AddNewMarkbutton
             // 
-            this.AddNewMarkbutton.Location = new System.Drawing.Point(160, 183);
+            this.AddNewMarkbutton.Location = new System.Drawing.Point(160, 209);
             this.AddNewMarkbutton.Name = "AddNewMarkbutton";
             this.AddNewMarkbutton.Size = new System.Drawing.Size(75, 23);
             this.AddNewMarkbutton.TabIndex = 7;
@@ -107,7 +109,7 @@
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(95, 235);
+            this.CloseButton.Location = new System.Drawing.Point(95, 261);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(75, 23);
             this.CloseButton.TabIndex = 8;
@@ -115,11 +117,29 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // PNLabel
+            // 
+            this.PNLabel.AutoSize = true;
+            this.PNLabel.Location = new System.Drawing.Point(34, 158);
+            this.PNLabel.Name = "PNLabel";
+            this.PNLabel.Size = new System.Drawing.Size(76, 13);
+            this.PNLabel.TabIndex = 9;
+            this.PNLabel.Text = "Phone number";
+            // 
+            // textBoxPN
+            // 
+            this.textBoxPN.Location = new System.Drawing.Point(135, 158);
+            this.textBoxPN.Name = "textBoxPN";
+            this.textBoxPN.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPN.TabIndex = 10;
+            // 
             // InfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 270);
+            this.ClientSize = new System.Drawing.Size(267, 292);
+            this.Controls.Add(this.textBoxPN);
+            this.Controls.Add(this.PNLabel);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AddNewMarkbutton);
             this.Controls.Add(this.AddMarktextBox4);
@@ -147,5 +167,7 @@
         private System.Windows.Forms.TextBox AddMarktextBox4;
         private System.Windows.Forms.Button AddNewMarkbutton;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Label PNLabel;
+        private System.Windows.Forms.TextBox textBoxPN;
     }
 }

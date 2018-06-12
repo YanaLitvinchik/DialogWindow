@@ -40,6 +40,8 @@
             this.SurnametextBox3 = new System.Windows.Forms.TextBox();
             this.TeachercomboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.PhoneNumber = new System.Windows.Forms.Label();
+            this.textBoxPN = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -132,7 +134,7 @@
             this.TeachercomboBox1.FormattingEnabled = true;
             this.TeachercomboBox1.Location = new System.Drawing.Point(121, 39);
             this.TeachercomboBox1.Name = "TeachercomboBox1";
-            this.TeachercomboBox1.Size = new System.Drawing.Size(121, 21);
+            this.TeachercomboBox1.Size = new System.Drawing.Size(126, 21);
             this.TeachercomboBox1.TabIndex = 10;
             this.TeachercomboBox1.SelectedIndexChanged += new System.EventHandler(this.TeachercomboBox1_SelectedIndexChanged);
             this.TeachercomboBox1.TextChanged += new System.EventHandler(this.TeachercomboBox1_TextChanged);
@@ -146,11 +148,29 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Teacher";
             // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.AutoSize = true;
+            this.PhoneNumber.Location = new System.Drawing.Point(26, 70);
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Size = new System.Drawing.Size(76, 13);
+            this.PhoneNumber.TabIndex = 12;
+            this.PhoneNumber.Text = "Phone number";
+            // 
+            // textBoxPN
+            // 
+            this.textBoxPN.Location = new System.Drawing.Point(121, 70);
+            this.textBoxPN.Name = "textBoxPN";
+            this.textBoxPN.Size = new System.Drawing.Size(126, 20);
+            this.textBoxPN.TabIndex = 13;
+            // 
             // Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(275, 496);
+            this.Controls.Add(this.textBoxPN);
+            this.Controls.Add(this.PhoneNumber);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TeachercomboBox1);
             this.Controls.Add(this.SurnametextBox3);
@@ -184,5 +204,7 @@
         private System.Windows.Forms.TextBox SurnametextBox3;
         private System.Windows.Forms.ComboBox TeachercomboBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label PhoneNumber;
+        private System.Windows.Forms.TextBox textBoxPN;
     }
 }

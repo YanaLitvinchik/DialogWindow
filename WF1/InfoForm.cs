@@ -27,6 +27,13 @@ namespace WF1
                 TEachertextBox1.Text = value;
             }
         }
+
+        public String PhoneNumber
+        {
+            get { return textBoxPN.Text; }
+            set { textBoxPN.Text = value; }
+        }
+
         public String NameStudent
         {
             get

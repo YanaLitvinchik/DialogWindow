@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF1", "WF1\WF1.csproj", "{7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlProject", "..\..\..\Downloads\_AmazingButton_GDI+\UserControlProject\UserControlProject.csproj", "{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib SMS", "..\..\..\Downloads\StudentProject-master\SMSLib\Lib SMS.csproj", "{A8DF5834-A3AA-488E-8E2D-D689900E461D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A34D0027-7C6A-43F3-AFB0-FF25076A7D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DF5834-A3AA-488E-8E2D-D689900E461D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DF5834-A3AA-488E-8E2D-D689900E461D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DF5834-A3AA-488E-8E2D-D689900E461D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DF5834-A3AA-488E-8E2D-D689900E461D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -33,14 +33,13 @@
             this.listBoxStudents = new System.Windows.Forms.ListBox();
             this.TeacherscomboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ButtonAdd = new System.Windows.Forms.Button();
             this.AddTeacherButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonChange
             // 
-            this.buttonChange.Location = new System.Drawing.Point(168, 156);
+            this.buttonChange.Location = new System.Drawing.Point(168, 95);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(75, 23);
             this.buttonChange.TabIndex = 0;
@@ -50,7 +49,7 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(168, 212);
+            this.buttonRemove.Location = new System.Drawing.Point(168, 151);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(75, 23);
             this.buttonRemove.TabIndex = 1;
@@ -86,15 +85,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Teachers :";
             // 
-            // ButtonAdd
-            // 
-            this.ButtonAdd.Location = new System.Drawing.Point(168, 107);
-            this.ButtonAdd.Name = "ButtonAdd";
-            this.ButtonAdd.Size = new System.Drawing.Size(75, 23);
-            this.ButtonAdd.TabIndex = 5;
-            this.ButtonAdd.Text = "Add";
-            this.ButtonAdd.UseVisualStyleBackColor = true;
-            // 
             // AddTeacherButton
             // 
             this.AddTeacherButton.Location = new System.Drawing.Point(168, 54);
@@ -107,7 +97,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(168, 264);
+            this.button1.Location = new System.Drawing.Point(168, 203);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -122,7 +112,6 @@
             this.ClientSize = new System.Drawing.Size(315, 323);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AddTeacherButton);
-            this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TeacherscomboBox1);
             this.Controls.Add(this.listBoxStudents);
@@ -142,7 +131,6 @@
         private System.Windows.Forms.ListBox listBoxStudents;
         private System.Windows.Forms.ComboBox TeacherscomboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ButtonAdd;
         private System.Windows.Forms.Button AddTeacherButton;
         private System.Windows.Forms.Button button1;
     }

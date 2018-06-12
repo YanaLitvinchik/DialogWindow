@@ -59,6 +59,17 @@ namespace WF1
                 SurnametextBox3.Text = value;
             }
         }
+        public String PhoneNumberStudent
+        {
+            get
+            {
+                return textBoxPN.Text;
+            }
+            set
+            {
+                textBoxPN.Text = value;
+            }
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
