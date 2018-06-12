@@ -63,17 +63,21 @@ namespace WF1
                     Name = wnd.Names
                 });
                 bs.ResetBindings(false);
-
+                }
+        }
+        private void AddTeacher(AddTeacherForm wnd)
+        {
+            var result = wnd.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                teacher.Add(new Teacher());
+                bs.ResetBindings(false);
             }
         }
-
         private void TeacherscomboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             //student.Clear();
             //student.Add(new Student() { Name = "asdsd" });
-
             //bs.ResetBindings(false);
             listBoxStudents.Items.Clear();
             foreach (var item in student)
@@ -85,6 +89,18 @@ namespace WF1
         private void listBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddTeacherButton_Click(object sender, EventArgs e)
+        {
+            var wnd = new AddTeacherForm();
+            AddTeacher(wnd);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var wnd = new SMS();
+            wnd.Show();
         }
     }
 }

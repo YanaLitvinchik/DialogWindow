@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonChange = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.listBoxStudents = new System.Windows.Forms.ListBox();
             this.TeacherscomboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ChangeButton = new System.Windows.Forms.Button();
+            this.ButtonAdd = new System.Windows.Forms.Button();
+            this.AddTeacherButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonAdd
+            // buttonChange
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(190, 156);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 0;
-            this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.button1_Click);
+            this.buttonChange.Location = new System.Drawing.Point(168, 156);
+            this.buttonChange.Name = "buttonChange";
+            this.buttonChange.Size = new System.Drawing.Size(75, 23);
+            this.buttonChange.TabIndex = 0;
+            this.buttonChange.Text = "Change";
+            this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(190, 212);
+            this.buttonRemove.Location = new System.Drawing.Point(168, 212);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(75, 23);
             this.buttonRemove.TabIndex = 1;
@@ -84,26 +86,48 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Teachers :";
             // 
-            // ChangeButton
+            // ButtonAdd
             // 
-            this.ChangeButton.Location = new System.Drawing.Point(190, 268);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(75, 23);
-            this.ChangeButton.TabIndex = 5;
-            this.ChangeButton.Text = "Change";
-            this.ChangeButton.UseVisualStyleBackColor = true;
+            this.ButtonAdd.Location = new System.Drawing.Point(168, 107);
+            this.ButtonAdd.Name = "ButtonAdd";
+            this.ButtonAdd.Size = new System.Drawing.Size(75, 23);
+            this.ButtonAdd.TabIndex = 5;
+            this.ButtonAdd.Text = "Add";
+            this.ButtonAdd.UseVisualStyleBackColor = true;
+            // 
+            // AddTeacherButton
+            // 
+            this.AddTeacherButton.Location = new System.Drawing.Point(168, 54);
+            this.AddTeacherButton.Name = "AddTeacherButton";
+            this.AddTeacherButton.Size = new System.Drawing.Size(97, 23);
+            this.AddTeacherButton.TabIndex = 6;
+            this.AddTeacherButton.Text = "Add a teacher";
+            this.AddTeacherButton.UseVisualStyleBackColor = true;
+            this.AddTeacherButton.Click += new System.EventHandler(this.AddTeacherButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(168, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "SMS";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 310);
-            this.Controls.Add(this.ChangeButton);
+            this.ClientSize = new System.Drawing.Size(278, 330);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddTeacherButton);
+            this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TeacherscomboBox1);
             this.Controls.Add(this.listBoxStudents);
             this.Controls.Add(this.buttonRemove);
-            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.buttonChange);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -113,12 +137,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.ListBox listBoxStudents;
         private System.Windows.Forms.ComboBox TeacherscomboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ChangeButton;
+        private System.Windows.Forms.Button ButtonAdd;
+        private System.Windows.Forms.Button AddTeacherButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
