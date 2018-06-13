@@ -61,6 +61,7 @@
             this.buttonSendSms.TabIndex = 1;
             this.buttonSendSms.Text = "Send";
             this.buttonSendSms.UseVisualStyleBackColor = true;
+            this.buttonSendSms.Click += new System.EventHandler(this.buttonSendSms_Click);
             // 
             // textBoxINPUTsms
             // 
@@ -69,6 +70,7 @@
             this.textBoxINPUTsms.Name = "textBoxINPUTsms";
             this.textBoxINPUTsms.Size = new System.Drawing.Size(246, 135);
             this.textBoxINPUTsms.TabIndex = 2;
+            this.textBoxINPUTsms.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxINPUTsms_KeyPress);
             // 
             // labelPhoneNumber
             // 
@@ -96,6 +98,7 @@
             this.ClearButton.TabIndex = 7;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // labelSymbols
             // 

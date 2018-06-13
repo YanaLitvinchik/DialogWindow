@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,11 +14,14 @@ namespace WF1
 {
     public partial class Form1 : Form
     {
+        String[] FileName = new String[] { "Student.bin", "Teacher.bin" };
+
         List<Student> student;
         List<Teacher> teacher;
         BindingSource bs = new BindingSource();
         public Form1()
         {
+
             student = new List<Student>();
             teacher = new List<Teacher>();
             student.Add(new Student("Vladimir", "Dmitrievich", "Klepach", new DateTime(1988, 4, 18), new List<int> { 1, 2, 3, 4}, "0631894543"));
@@ -25,6 +30,7 @@ namespace WF1
             teacher.Add(new Teacher("Li Y.V.", "0631894543"));
             teacher.Add(new Teacher("Zulu B.E.", "0631894543"));
             teacher.Add(new Teacher("Alpha D.T.", "0631894543"));
+            DeSerialize();
             InitializeComponent();
             TeacherscomboBox1.Items.AddRange(teacher.ToArray());
             TeacherscomboBox1.DisplayMember = "TeachersName";
@@ -48,6 +54,8 @@ namespace WF1
             wnd1.Marks = (listBoxStudents.SelectedItem as Student).Marks;
             wnd1.PhoneNumber = (listBoxStudents.SelectedItem as Student).PhoneNumberStudent;
             var result = wnd1.ShowDialog();
+            Serialize();
+
         }
         private void Add(Dialog wnd)
         {
@@ -110,10 +118,27 @@ namespace WF1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var wnd = new SMS(teacher);
+            var wnd = new SMS();
             wnd.Show();
         }
+        private void Serialize()
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            using (var fs = new FileStream(FileName[0], FileMode.OpenOrCreate))
+            {
+                bf.Serialize(fs, student);
+            }
+        }
 
-       
+        private void DeSerialize()
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            if (File.Exists(FileName[0]))
+                using (var fs = new FileStream(FileName[0], FileMode.Open))
+                {
+                    student = bf.Deserialize(fs) as List<Student>;
+                }
+        }
+
     }
 }

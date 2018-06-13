@@ -12,12 +12,35 @@ namespace WF1
 {
     public partial class SMS : Form
     {
-        public SMS(List<Teacher> teachers)
+        private List<Student> students = new List<Student>();
+        public List<Student> Students
+        {
+            get { return students; }
+            set { students = value; }
+        }
+        private List<Teacher> teachers = new List<Teacher>();
+
+        public List<Teacher> Teachers
+        {
+            get { return teachers; }
+            set { teachers = value; }
+        }
+        public SMS()
         {
             InitializeComponent();
-            comboBoxPhoneNumber.DataSource = teachers;
-            comboBoxPhoneNumber.DisplayMember = "PhoneNumberTeachers";
         }
+        private Teacher teacher;
+        public Teacher _Teacher
+        {
+            get { return teacher; }
+            set
+            {
+                teacher = value;
+                teacher.TeachersName = value.TeachersName;
+                comboBoxPhoneNumber.Text = value.PhoneNumberTeacher;
+            }
+        }
+        public int CountSymbols { get; set; }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -27,11 +50,11 @@ namespace WF1
         {
             get
             {
-                return comboBoxPhoneNumber.Text;
+                return comboBoxPhoneNumber.SelectedItem.ToString();
             }
             set
             {
-                comboBoxPhoneNumber.Text = value;
+                comboBoxPhoneNumber.SelectedItem = value;
             }
         }
         public String NameUser
@@ -69,10 +92,31 @@ namespace WF1
                     break;
             }
         }
-
+        private void Update()
+        {
+            labelSymbols.Text = textBoxINPUTsms.Text.Count().ToString();
+           //if(textBoxINPUTsms.Text.Count()> 140)
+                
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonSendSms_Click(object sender, EventArgs e)
+        {
+           // Lib_SMS.SMSSender sender = new Lib_SMS.SMSSender("vladmir.klepach@gmail.com", "1qaz@WSX", "Yana");
+            //var tmp = sender.Send(comboBoxPhoneNumber.Text, textBoxINPUTsms.Text);
+        }
+
+        private void textBoxINPUTsms_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Update();
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            textBoxINPUTsms.Clear();
         }
     }
 }
